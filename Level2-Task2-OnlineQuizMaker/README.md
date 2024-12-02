@@ -23,12 +23,8 @@ Welcome to the **Quiz Creation Platform** repository! This project is a modern, 
 ## 🛠️ Technologies Used
 
 - **Frontend**: Vue.js  
-  A modern JavaScript framework for building responsive and reactive user interfaces.  
-- **Backend**: Node.js  
-  Handles API development and server-side logic seamlessly.  
-- **Database**: MongoDB  
-  A scalable NoSQL database to store quizzes and user data effectively.  
-- **Styling**: Tailwind CSS  
+  A modern JavaScript framework for building responsive and reactive user interfaces.   
+- **Styling**: CSS  
   Provides a modern, scalable design system to enhance the application's aesthetic.  
 
 ---
@@ -36,10 +32,6 @@ Welcome to the **Quiz Creation Platform** repository! This project is a modern, 
 ## 🚀 Getting Started
 
 Follow these steps to set up and run the project locally:
-
-### Prerequisites:
-- Node.js and npm installed
-- MongoDB running locally or via a cloud service like MongoDB Atlas
 
 ### Installation:
 
