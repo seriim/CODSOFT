@@ -1,0 +1,474 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.body{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    /* align-items: center; */
+    padding: 0 5%;
+    margin: 50px 100px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    flex-direction: row; 
+    justify-content:space-around;
+}
+
+.headerLogo{
+    transition: transform 0.3s ease;
+    width: 80px;
+
+}
+.headerLogo:hover {
+    transform: scale(1.1);
+}
+
+.headerLink a{
+    color: #c0c0c0;
+    text-decoration: none;
+}
+
+.link{
+    display: flex;
+    justify-content:flex-end;
+    gap: 2rem;
+}
+
+.headerLink {
+    color: #c0c0c0;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+    transition: transform 0.3s ease;
+}
+
+.headerLink:hover a{
+    color: #F9FAF8;
+    transform: scale(1.1);
+}
+
+.squareOne{
+    background-color: #1f2937;
+    /* padding: 50px 0; */
+    text-align: center;
+    color: #F9FAF8;
+    justify-content: space-between;
+}
+
+.squareOne-content{
+    /* margin: 100px 0; */
+    display: flex;
+    justify-content: center;
+    /* align-items:start; */
+    padding: 50px;
+    gap: 20px;
+    text-align: left;
+}
+
+.squareOneImage{
+    width: 500px;
+    transition: transform 0.3s;
+}
+
+.squareOneImage:hover {
+    transform: scale(1.05);
+}
+
+
+.squareOne-details{
+    font-family: sans-serif;
+    padding-right: 20px;
+    text-align: left;
+    width: 500px;
+    animation: fadeIn 1.5s ease;
+}
+
+
+.contentTitle{
+    
+    font-size: 32px;
+    font-weight: 700;
+    
+}
+
+.squareOne-description{
+    font-size: 16px;
+    margin-top: 20px;
+    color: #E5E7EB;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.signUpButton{
+    background-color: #21BCE2;
+    color: white;
+    font-size: 16px;
+    width: 110px;
+    height: 40px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    
+}
+
+.signUpButton:hover {
+    background-color: #1a95b4;
+    transform: scale(1.0);
+}
+
+
+/* SQUARE TWO------------------------------------------------------------------------------ */
+.squareTwo{
+    /* background-color: #E5E7EB; */
+    font-family: sans-serif;
+    padding: 50px;
+    text-align: center;
+    align-items: center;
+
+}
+
+.title{
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2937;
+    text-align: center;
+    margin-bottom: 40px;
+    
+}
+
+.content{
+    margin: 100px 150px;
+    display: flex;
+    /* flex: 1; */
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin-bottom: 120px;
+
+}
+
+.Details{
+    /* display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center; */
+    text-align: center;
+
+}
+
+
+.Details img{
+    object-fit: cover;
+    width: 250px;
+    height: 300px;
+    border: 5px solid #21BCE2;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.Details img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.description{
+    margin-top: 10px;
+    color: gray;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+/* Square 3 ------------------------------------------------------------------------------------------------------- */
+
+.squareThree{
+    padding: 200px 250px;
+    background-color: #E5E7EB;
+    align-items: center;
+}
+
+
+.quote{
+    font-size: 24px;
+    /* color: #1F2937;
+    font-weight: 200; */
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.author{
+    font-size: 18px;
+    color: #1F2937;
+    text-align: end;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Square 4------------------------------------------------------------------------------------------------------- */
+
+.SquareFour{  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 40px;
+}
+
+.SquareFourText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #21BCE2;
+    text-align: center;
+    width: 900px;
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+} 
+
+.textOne{
+    max-width: 680px;
+}
+
+.textTwo{
+    margin-top: 20px;
+}
+
+.SquareFour .signUpButton{
+    border: solid;
+    border-color: white;
+    padding: 5px 10px;
+    height: 40px;
+    margin-top: 10px;
+    /* height: 30px; */
+}
+
+
+footer{
+    background-color: #1f2937;
+    /* height: 100px; */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Square FIve */
+.squareFive{
+    text-align: center;
+    padding: 50px 0;
+    border-bottom: 2px solid #eee;
+    margin: 40px 40px;
+}
+
+.squareFive h2{
+    margin-bottom: 50px;
+}
+
+.services-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.services-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-item {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s;
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+}
+
+.service-item:hover {
+    background-color: #21BCE2;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Square 6 */
+
+.squareSix{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-top: 2px solid #eee;
+}
+
+.social-icon {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #21BCE2;
+}
+
+
+/* Media Queries */
+
+/* For Tablets and Smaller Screens */
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link {
+        gap: 2rem;
+        flex-direction: row;
+
+    }
+
+    .squareOne-content {
+        flex-direction: column;
+        padding: 40px;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .contentTitle {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .squareOne-description {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .squareOne-details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+    .squareTwo{
+        margin: 20px 20px;
+        padding: 20px;
+    }
+    .Details img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+    .squareThree{
+        padding: 50px 50px;
+        background-color: #E5E7EB;
+        align-items: center;
+    }
+
+    .quote {
+        font-size: 20px;
+        align-items: center;
+    }
+
+    .author {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .squareFour {
+        background-color: rgb(24, 124, 234);
+        color: white;
+        padding: 30px;
+        margin: 40px 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        /* gap: 3rem; */
+        width: 400px;
+        height: 150px;
+        /* justify-content: space-around; */
+        align-items: center;
+    }
+    
+
+    .SquareFourText{
+        text-align: center;
+    }
+}
+
+/* For Mobile Screens */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link {
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .squareOne-content {
+        flex-direction: column;
+        padding: 30px;
+        align-items: center;
+    }
+
+    .contentTitle {
+        font-size: 24px;
+    }
+
+    .squareOne-description {
+        font-size: 13px;
+    }
+
+    .Details img {
+        width: 150px;
+        height: auto;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .quote {
+        font-size: 18px;
+    }
+
+    .author {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .squareFour {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
