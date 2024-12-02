@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Calculator</title>
+        <link rel="stylesheet" href="stylesheet.css" />
+    </head>
+    <body>
+        <div class="calculator">
+            <div class="title">My Calculator</div>
+            <input type="text" class="display" id="display" readonly>
+            <div class="buttons">
+                <!-- First row with additional functions -->
+                <button class="button clear" onclick="clearDisplay()">C</button>
+                <button class="button operation" onclick="square()">x²</button>
+                <button class="button operation" onclick="squareRoot()">√</button>
+                <button class="button operation" onclick="percentage()">%</button>
+
+                <!-- Number and operation buttons -->
+                <button class="button" onclick="appendValue('7')">7</button>
+                <button class="button" onclick="appendValue('8')">8</button>
+                <button class="button" onclick="appendValue('9')">9</button>
+                <button class="button operation" onclick="setOperation('/')">/</button>
+
+                <button class="button" onclick="appendValue('4')">4</button>
+                <button class="button" onclick="appendValue('5')">5</button>
+                <button class="button" onclick="appendValue('6')">6</button>
+                <button class="button operation" onclick="setOperation('*')">*</button>
+
+                <button class="button" onclick="appendValue('1')">1</button>
+                <button class="button" onclick="appendValue('2')">2</button>
+                <button class="button" onclick="appendValue('3')">3</button>
+                <button class="button operation" onclick="setOperation('-')">-</button>
+
+                <button class="button" onclick="appendValue('0')">0</button>
+                <button class="button" onclick="appendValue('.')">.</button>
+                <button class="button" onclick="calculate()">=</button>
+                <button class="button operation" onclick="setOperation('+')">+</button>
+            </div>
+        </div>
+
+        <script>
+            let display = document.getElementById('display');
+            let currentOperation = null;
+            let currentInput = '';
+            let calculation = '';
+
+            function appendValue(value) {
+                if (value === '.' && currentInput.includes('.')) return; // Prevent multiple decimals
+                currentInput += value;
+                updateDisplay();
+            }
+
+            function setOperation(operation) {
+                if (currentInput === '' && calculation === '') return; // Prevent operation without input
+
+                if (currentInput !== '') {
+                    calculation += currentInput + ' ' + operation + ' ';
+                    currentInput = '';
+                } else {
+                    calculation = calculation.slice(0, -2) + operation + ' ';
+                }
+
+                currentOperation = operation;
+                updateDisplay();
+            }
+
+            function calculate() {
+                if (currentInput !== '') {
+                    calculation += currentInput;
+                }
+
+                try {
+                    let result = eval(calculation.replace(/\s/g, ''));
+                    display.value = result;
+                    resetCalculator(result);
+                } catch (error) {
+                    display.value = 'Error';
+                    resetCalculator();
+                }
+            }
+
+            function clearDisplay() {
+                display.value = '';
+                currentInput = '';
+                calculation = '';
+            }
+
+            function updateDisplay() {
+                display.value = calculation + currentInput;
+            }
+
+            function resetCalculator(result = '') {
+                currentInput = result.toString();
+                calculation = '';
+                currentOperation = null;
+            }
+
+            function square() {
+                if (currentInput) {
+                    currentInput = (parseFloat(currentInput) ** 2).toString();
+                    updateDisplay();
+                }
+            }
+
+            function squareRoot() {
+                if (currentInput) {
+                    currentInput = (Math.sqrt(parseFloat(currentInput))).toString();
+                    updateDisplay();
+                }
+            }
+
+            function percentage() {
+                if (currentInput) {
+                    currentInput = (parseFloat(currentInput) / 100).toString();
+                    updateDisplay();
+                }
+            }
+        </script>
+    </body>
+</html>

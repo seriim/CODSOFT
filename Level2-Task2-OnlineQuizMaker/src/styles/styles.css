@@ -1,0 +1,107 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: white; /* Light background */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #333;
+}
+
+button {
+  background-color: #007bff; /* Blue */
+  color: rgb(244, 244, 244);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue */
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Forms */
+input, select, textarea {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Card-like layout for forms and quiz display */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px;
+}
+
+/* Minimalist form layout */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive Design
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+
+  button {
+    width: 100%;
+  }
+} */
+
+/* Global media queries for mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .auth-container {
+    padding: 20px;
+  }
+
+  .auth-card, .card {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  button {
+    padding: 12px 24px;
+  }
+
+  .quizzes-list {
+    padding: 20px;
+  }
+}
+
