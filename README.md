@@ -69,16 +69,16 @@ A modern, responsive web application built with Vue.js, designed for creating an
 - Create, save, and manage quizzes using browser local storage.
 - Upcoming features include a built-in calculator and advanced analytics tools
 
-###Technologies Used
+### Technologies Used
 - Vue.js for dynamic, component-based development.
 - CSS for clean, sleek UI design.
 - Local Storage for data persistence without backend dependency.
 
 ### Getting Started
 1. Clone the repository:
-```bash
-git clone https://github.com/your-username/quiz-creation-platform.git
-```
+   ```bash
+   git clone https://github.com/your-username/quiz-creation-platform.git
+   ```
 2. Navigate to the directory:
 ```bash
 cd quiz-creation-platform
