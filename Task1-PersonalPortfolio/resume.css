@@ -1,0 +1,180 @@
+body { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f0f0f0; /* Light grey background */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Header */
+header {
+    width: 900px;
+    text-align: center;
+    padding: 20px;
+    color:white;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #161616;
+    border-radius: 0 0 10px 10px ;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    /* color: #000; */
+}
+
+
+.resume-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0%;
+    padding: 20px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume-header .back-link {
+    position: absolute;  /* Position it to the left */
+    left: 40px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.resume-header h1 {
+    margin: 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+.back-link {
+    font-size: 1em;
+    color: #aaaaaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #ffffff;
+}
+
+.resume-section {
+    text-align: center;
+    padding: 40px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.resume-viewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    height: 700px;
+    border: 1px solid #ddd;
+    margin: 20px 10px;
+    opacity: 0;
+    animation: fadeIn 1s 0.5s forwards;
+}
+
+.download-button {
+    padding: 12px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #000;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-bottom: 20px;
+}
+
+.download-button:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries for Mobile Devices */
+@media screen and (max-width: 768px) {
+    /* Header */
+    header {
+        width: 100%;  /* Make the header take full width */
+        padding: 15px;  /* Reduce padding on smaller screens */
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.5em;  /* Adjust font size for header */
+    }
+
+    /* Resume section */
+    main section {
+        width: 100%;  /* Make sections full-width */
+        padding: 20px;  /* Reduce padding */
+    }
+
+    .resume-header {
+        padding: 15px 20px;  /* Adjust padding */
+    }
+
+    .resume-viewer {
+        width: 100%;  /* Make the resume viewer take full width */
+        height: auto;  /* Allow the height to adjust automatically */
+        margin: 10px;  /* Reduce margin */
+    }
+
+    .download-button {
+        padding: 10px 20px;  /* Adjust button padding */
+        font-size: 1em;  /* Adjust font size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Further adjustments for very small devices */
+    header h1 {
+        color:transparent;
+        font-size: 1.2em;  /* Further decrease header font size */
+    }
+
+    .resume-header {
+        padding: 10px 15px;  /* Adjust padding for even smaller devices */
+        background-color: #000;
+    }
+
+    .resume-viewer {
+        width: 100%;  /* Full width for iframe */
+        height: 700px;  /* Fixed height for better display */
+        margin: 10px 0;  /* Adjust margin to ensure it doesn't overflow */
+    }
+
+    .download-button {
+        padding: 8px 15px;  /* Reduce button size */
+        font-size: 0.9em;  /* Adjust font size */
+    }
+
+    /* Hide the text */
+    .back-link {
+        font-size: 1em;  /* Hide text */
+        color: transparent;  /* Make text invisible */
+    }
+    .back-link:hover {
+        color: #000;
+    }
+
+    /* Display the arrow instead of the text */
+    .back-link::before {
+        content: '←';  /* Arrow icon (you can also use other symbols like →, ↑, ↓, or an emoji) */
+        font-size: 1.5em;  /* Adjust size of the arrow */
+        color: #fff;  /* Change color of the arrow */
+    }
+}
