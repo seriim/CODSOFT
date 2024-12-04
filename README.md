@@ -94,10 +94,10 @@ npm run serve
 5. Open the app in your browser:
 Navigate to http://localhost:8080.
 
-##About CodSoft
+## About CodSoft
 This internship provided an opportunity to tackle real-world tasks and showcase my skills. CodSoft is an innovative platform that enables developers to gain hands-on experience through practical projects.
 
-##Installing Vue.js
+## Installing Vue.js
 To get started with Vue.js, follow the steps below to set up your local environment:
 
 1. Install Node.js and npm
@@ -105,14 +105,14 @@ Before you can use Vue.js, you need to have Node.js and npm (Node Package Manage
 
 - Download and Install Node.js:
 
- - - Visit Node.js official website and download the latest stable version for your operating system.
- - - The installation process will automatically install npm as well.
+   - Visit Node.js official website and download the latest stable version for your operating system.
+   - The installation process will automatically install npm as well.
 - Verify the Installation: After installation, open your terminal/command prompt and check the versions of Node.js and npm to ensure they are correctly installed:
-```bash
-node -v
-npm -v
-```
-This will show the installed versions.
+   ```bash
+   node -v
+   npm -v
+   ```
+   This will show the installed versions.
 
 2. Install Vue CLI
 The Vue CLI (Command Line Interface) is an essential tool for setting up and managing Vue.js projects. It helps you quickly scaffold new projects with a pre-configured setup and tools.
